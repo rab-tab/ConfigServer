@@ -22,7 +22,7 @@ def mvnCMD = "${mvnHome}/bin/mvn "
                 projectId: env.PROJECT_ID,
                 clusterName: env.CLUSTER,
                 location: env.ZONE,
-                manifestPattern: 'K8s/deployment.yaml',
+                manifestPattern: 'k8s/deployment.yaml',
                 credentialsId: env.PROJECT_ID,
                 verifyDeployments: true])
 
