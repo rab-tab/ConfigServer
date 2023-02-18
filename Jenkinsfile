@@ -7,7 +7,7 @@ def mvnCMD = "${mvnHome}/bin/mvn "
         branches: [[name: '*/main']],
         extensions: [],
         userRemoteConfigs :[[credentialsId : 'git',
-        url : 'https://github.com/rab-tab/ConfigServer.git']]})
+        url : 'https://github.com/rab-tab/ConfigServer.git']]])
     }
     stage('Build and Push Image'){
         withCredentials([file(credentialsId: 'gcp', variable: 'GC_KEY')]) {
